@@ -6,7 +6,10 @@ use Carbon\Carbon,
 /**
  * Time Iterator
  *
- * Used to request data on an interval basis over a period of time
+ * Making it easier to pull in data for intervals of time over a period of time.
+ *
+ * @author  Sean Fisher <hi@seanfisher.co>
+ * @link https://github.com/srtfisher/time-iterator
  */
 class TimeIterator implements \Iterator, \Countable {
     /**
