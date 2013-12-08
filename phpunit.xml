@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit
+    colors="true"
+    stopOnFailure="false"
+    syntaxCheck="true"
+    bootstrap="vendor/autoload.php">
+    <testsuites>
+        <testsuite name="Time Iterator Suite">
+            <directory>./tests/Srtfisher/TestCase.php</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
