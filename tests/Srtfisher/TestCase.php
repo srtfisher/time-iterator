@@ -99,7 +99,7 @@ class TestCase extends \PHPUnit_Framework_TestCase {
         $object->next();
 
         $this->assertEquals(1, $object->key());
-        
+
         // Go though 10 (there is only 7 in the system) so it should be invalid
         for ($i = 0; $i < 10; $i++)
             $object->next();
@@ -124,7 +124,7 @@ class TestCase extends \PHPUnit_Framework_TestCase {
 
     /**
      * @expectedException               Srtfisher\TimeIteratorException
-     * @expectedExceptionMessage  Callback for Timeiterator is not callable.
+     * @expectedExceptionMessage  Callback for `Timeiterator` is not callable.
      */
     public function testValidCallback()
     {
@@ -163,7 +163,7 @@ class TestCase extends \PHPUnit_Framework_TestCase {
         $results = $object->getResults();
         $this->assertEquals(count($results), 7);
         $start = $object->getStart()->copy();
-        
+
         foreach ($object as $data) {
             $this->assertEquals($start, $data['intervalStart']);
             $start->addSeconds(3600*24);
