@@ -32,10 +32,8 @@ $iterate->setStart(60*60*24*7*5);
 // Set the Interval to go over as 24 hours
 $iterate->setInterval(60*60*24);
 
-$iterate->setCallback(function($start, $end, $object) {
-    // $start and $end are Carbon objects
-    // 
-    // Perform some logic here...
+$iterate->setCallback(function(Carbon $start, Carbon $end, TimeIterator $object) {
+    // Perform some logic here
     $object->addResults(array(
         'data' => true,
         // ....
