@@ -1,7 +1,9 @@
 <?php namespace Srtfisher;
+
 use Carbon\Carbon;
 
-class TestCase extends \PHPUnit_Framework_TestCase {
+class TestCase extends \PHPUnit_Framework_TestCase
+{
     public function testStartTimeMethod()
     {
         $object = new TimeIterator;
@@ -74,7 +76,7 @@ class TestCase extends \PHPUnit_Framework_TestCase {
     public function testCountableInterface()
     {
         // Create a time iterator going back 7 days that will loop over each day
-        $object = new TimeIterator(3600*24*7, null, 3600*24, function($start, $end, $object) {
+        $object = new TimeIterator(3600*24*7, null, 3600*24, function ($start, $end, $object) {
             $object->addResults(array(
                 'testValueOne' => true,
                 'testValueTwo' => false
@@ -89,7 +91,7 @@ class TestCase extends \PHPUnit_Framework_TestCase {
     public function testArrayAccessInterface()
     {
         // Create a time iterator going back 7 days that will loop over each day
-        $object = new TimeIterator(3600*24*7, null, 3600*24, function($start, $end, $object) {
+        $object = new TimeIterator(3600*24*7, null, 3600*24, function ($start, $end, $object) {
             $object->addResults(array(
                 'testValueOne' => true,
                 'testValueTwo' => false
@@ -101,8 +103,9 @@ class TestCase extends \PHPUnit_Framework_TestCase {
         $this->assertEquals(1, $object->key());
 
         // Go though 10 (there is only 7 in the system) so it should be invalid
-        for ($i = 0; $i < 10; $i++)
+        for ($i = 0; $i < 10; $i++) {
             $object->next();
+        }
 
         $this->assertFalse($object->valid());
 
@@ -116,7 +119,7 @@ class TestCase extends \PHPUnit_Framework_TestCase {
      */
     public function testNoResultsAdded()
     {
-        $object = new TimeIterator(3600*24*7, null, 3600*24, function($start, $end, $object) {
+        $object = new TimeIterator(3600*24*7, null, 3600*24, function ($start, $end, $object) {
 
         });
         $object->run();
@@ -143,7 +146,7 @@ class TestCase extends \PHPUnit_Framework_TestCase {
 
     public function testResultsReturned()
     {
-        $object = new TimeIterator(3600*24*7, null, 3600*24, function($start, $end, $object) {
+        $object = new TimeIterator(3600*24*7, null, 3600*24, function ($start, $end, $object) {
             $object->addResults(array(
                 'value' => 'the value',
             ));
@@ -181,7 +184,7 @@ class TestCase extends \PHPUnit_Framework_TestCase {
     public function testEndTimeBeforeStart()
     {
         $object = new TimeIterator;
-        $object->setCallback(function($start, $end, $object) {
+        $object->setCallback(function ($start, $end, $object) {
             $object->addResults(array());
         });
 
