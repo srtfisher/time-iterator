@@ -24,6 +24,8 @@ Install via Composer
 ## Usage
 
 ```php
+use Srtfisher\TimeIterator;
+
 $iterate = new TimeIterator;
 
 // Set the Start date for five months ago
