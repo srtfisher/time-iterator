@@ -4,7 +4,7 @@
     colors="true"
     stopOnFailure="false"
     syntaxCheck="true"
-    bootstrap="vendor/autoload.php">
+    bootstrap="tests/bootstrap.php">
     <testsuites>
         <testsuite name="Time Iterator Suite">
             <directory>./tests/Srtfisher/TestCase.php</directory>
