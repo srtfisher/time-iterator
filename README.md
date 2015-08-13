@@ -2,7 +2,7 @@
 
 # Time Iterator
 
-Making it easier to pull in data for intervals of time over a period of time. This was built so that 
+Making it easier to pull in data for intervals of time over a period of time. This was built so that
 it would be easier to build graphs that show changes over time for a specific period.
 
 ## Authors
@@ -16,7 +16,7 @@ Install via Composer
 ```json
 {
     "require": {
-        "srtfisher/time-iterator": "0.0.1"
+        "srtfisher/time-iterator": "0.0.2"
     },
 }
 ```
